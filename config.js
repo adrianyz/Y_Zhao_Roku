@@ -5,7 +5,7 @@ var config = {
   host: "localhost",
   database: "getMovies",
 
-  kidsmode : false
+  kidsmode : true
 }
 
 module.exports = config;
