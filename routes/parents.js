@@ -8,8 +8,10 @@ var toRender = 'main_parents';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  config.kidsmode = false;
   res.render(toRender, {
-    title: 'Movies For Parents',
+    title: 'Parents Movies',
+    kidsmode : false
   });
 });
 module.exports = router;
