@@ -1,22 +1,26 @@
 <div class="main">
-    <a href="/" class="backBtn">HOME</a>
+  <a href="/" class="backBtn">HOME</a>
 
-    {{#each videoData}}
-        <div class="infoPanel">
-            <div class="trailer">
-                <h4>TRAILER (Click Image)</h4>
-                <img id="{{movie_id}}" class="thumbnails" src="{{ movie_cover }}" alt="{{movie_title}}" />
-            </div>
-            <div class="intro">
-                <h4>{{ video_title }}</h4>
-                <div>{{ video_desc }}</div>
-            </div>
-        </div>
-    {{/each}}
-
-    <div class="videoPanel">
-        <video id="videoContainer" width="800" height="450" controls>
-            <source src="" type="video/mp4">
+  <div class="videoContainer">
+    <video id="videoBox" width="600" height="400" controls preload="none">
+            <source src="videos/13.mp4" type="video/mp4">
         </video>
+    <p class="movDesc hidden">Description</p>
+
+
+  </div>
+
+  {{#each videoData}}
+    <div class="movs">
+      <h4>{{ movie_title }}</h4>
+      <div class="cover">
+        <img id="{{movie_trailer}}" class="posters" width="275" src="{{ movie_cover }}" alt="{{movie_title}}" />
+      </div>
+      <div class="movInfo">
+        <p>{{ movie_rating }}</p>
+        <p class="desc">{{ movie_desc}}</p>
+      </div>
     </div>
+  {{/each}}
+
 </div>

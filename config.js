@@ -4,8 +4,6 @@ var config = {
   port: 8889,
   host: "localhost",
   database: "getMovies",
-
-  // kidsmode : true
 }
 
 module.exports = config;

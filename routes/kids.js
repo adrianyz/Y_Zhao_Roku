@@ -6,10 +6,12 @@ var config = require('../config');
 // ternary statement => MDN ternary
 var toRender = 'main_kids';
 
-/* GET home page. */
+
 router.get('/', function(req, res, next) {
+  config.kidsmode = true;
   res.render(toRender, {
-    title: 'Movies For Kids',
+    title: 'Kids Movies',
+    kidsmode : true
   });
 });
 module.exports = router;
