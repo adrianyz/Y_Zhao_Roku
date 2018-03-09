@@ -4,16 +4,15 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', (req, res) => {
-  connect.query('SELECT * FROM tbl_movies', (err, result) => {
+  connect.query('SELECT * FROM tbl_movies WHERE movie_genre = "animation"', (err, result) => {
     if (err) {
       throw err; console.log(err);
     } else {
-      console.log(result);
+      console.log("fire " + result);
 
-      res.render('cars', {
-        title: 'Mini Cars',
-        message : "A Selection of Minis",
-        carData : result
+      res.render('animation', {
+        title: 'Animation Movie',
+        videoData : result
       });
     }
   });

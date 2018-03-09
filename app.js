@@ -26,6 +26,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./routes/index'));
 app.use('/api', require('./routes/api'));
+app.use('/kids', require('./routes/kids'));
+app.use('/parents', require('./routes/parents'));
+app.use('/action', require('./routes/action'));
+app.use('/animation', require('./routes/animation'));
+app.use('/fantasy', require('./routes/fantasy'));
+app.use('/family', require('./routes/family'));
 
 
 // catch 404 and forward to error handler
