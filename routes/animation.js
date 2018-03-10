@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
       res.render('animation', {
         title: 'Animation Movie',
-        videoData : result
+        videoData : result,
       });
     }
   });
