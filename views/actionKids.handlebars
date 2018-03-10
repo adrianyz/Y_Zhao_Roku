@@ -1,0 +1,28 @@
+<div class="main">
+  <a href="/" class="backBtn">HOME</a>
+
+  <div class="videoContainer">
+    <p>Click on the poster to watch trailer</p>
+    <video id="videoBox" width="600" height="400" controls preload="none">
+            <source src="videos/1.mp4" type="video/mp4">
+        </video>
+
+
+  </div>
+
+  {{#each videoData}}
+    <div class="movs">
+      <div  class="movTitle"><h4>{{ movie_title }}</h4></div>
+      <div class="movContent">
+        <div class="cover">
+          <img id="{{movie_trailer}}" class="posters" width="175" src="{{ movie_cover }}" alt="{{movie_title}}" />
+        </div>
+        <div class="movInfo">
+          <p>IMDb Rating: {{ movie_rating }}</p>
+          <p class="desc">{{ movie_desc}}</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+
+</div>
