@@ -15,7 +15,9 @@
 
   {{#each videoData}}
     <div class="movs">
-      <h4>{{ movie_title }}</h4>
+      <div class="movTitle">
+        <h4>{{ movie_title }}</h4>
+      </div>
       <div class="cover">
         <img id="{{movie_trailer}}" class="posters" width="175" src="{{ movie_cover }}" alt="{{movie_title}}" />
       </div>
