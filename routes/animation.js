@@ -4,12 +4,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', (req, res) => {
-if(config.kidsmode){
-  selection = 'SELECT * FROM tbl_movies WHERE movie_genre = "animation" AND movie_grades = "pnk"'
-}else{
-  selection ='SELECT * FROM tbl_movies WHERE movie_genre = "animation"'
-}
-  connect.query(selection, (err, result) => {
+  connect.query('SELECT * FROM tbl_movies WHERE movie_genre = "animation"', (err, result) => {
     if (err) {
       throw err; console.log(err);
     } else {
@@ -18,7 +13,6 @@ if(config.kidsmode){
       res.render('animation', {
         title: 'Animation Movie',
         videoData : result,
-        config.kidsmode
       });
     }
   });

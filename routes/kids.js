@@ -8,7 +8,7 @@ var toRender = 'main_kids';
 
 
 router.get('/', function(req, res, next) {
-  config.kidsmode = true;
+  // config.kidsmode = true;
   res.render(toRender, {
     title: 'Kids Movies',
     kidsmode : true,
